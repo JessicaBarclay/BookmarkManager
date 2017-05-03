@@ -5,7 +5,7 @@ require_relative 'data_mapper_setup'
 
 class BookmarkManagerWeb < Sinatra::Base
   enable :sessions
-  set :sessions_secret, 'super secret'
+  set :session_secret, 'super secret'
 
   get '/links' do
     @links = Link.all
